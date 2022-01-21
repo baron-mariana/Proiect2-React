@@ -7,6 +7,11 @@ import About from './pages/About';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Page404 from './pages/Page404';
+import Category from "./pages/Category";
+// Vom folosi utility-classes in intreaga aplicatie, deci importam
+// fisierul in App, pentru a avea vizibilitate globala.
+import './utils/utility-classes.css';
+
 
 class App extends React.Component{
   constructor() {
@@ -19,7 +24,7 @@ class App extends React.Component{
 
       return(
 
-<div>
+<div className= "app">
     {/* Pentru a randa O SINGURA PAGINA/COMPONENTA, avem nevoie de Switch */}
     {/* Cum functioneaza Switch? Cand gaseste o ruta(Route) potrivita, afiseaza(randeaza) pagina/componenta aferenta,
         dupa care IGNORA toate celelalte pagini/componente cuprinse in interiorul lui.*/}
@@ -42,6 +47,7 @@ class App extends React.Component{
         {/* ATENTIE! Daca utilizatorul navigheaza catre o ruta inexistenta, ii vom afisa pagina de 404.*/}
         {/* Ce vom pune la path? Caracterul '*'! Pentru ca Switch ia rutele in ordine, iar daca nu a gasit nicio ruta valida,
           inseamna ca ORICE ruta a fost introdusa in rest e invalida. Caracterul * tine loc de "orice".*/}
+        <Route path= '/category/:categoryName' component={Category}/>
         <Route path= '*' element={Page404} />
 
       </Routes>

@@ -39,7 +39,7 @@ function Footer(){
                 <p className="mb-1">
                     {/* Putem la click sa intram direct in aplicatia de mail, specificand adresa de mail catre
                         care scriem, dupa "mailto:". */}
-                    <a href="mailto:razvan.cirlugea@gmail.com">
+                    <a href="mailto:baronmariana28@gmail.com">
                         <Mail className="mr-1 mb-1 footer-icon"/>
                         baronmariana28@gmail.com
                     </a>
@@ -50,15 +50,15 @@ function Footer(){
             <div>
                 <h3 className="h5">Contactează-mă:</h3>
                 <p className="mb-1">
-                    <a href="https://github.com/razvancir96">
+                    <a href="https://github.com/baron-mariana">
                         <GitHub className="mr-1 mb-1 footer-icon"/>
                         baron-mariana
                     </a>
                 </p>
                 <p className="m-0">
-                    <a href="https://www.linkedin.com/in/razvancirlugea/">
+                    <a href="https://www.linkedin.com/in/mariana-baron/">
                         <LinkedIn className="mr-1 footer-icon"/>
-                        razvancirlugea
+                        marianabaron
                     </a>
                 </p>
             </div>
