@@ -1,14 +1,17 @@
-import React, {Component} from "react";
-import Layout from "../components/Layout";
+import React, {Component} from 'react';
+import Layout from '../components/Layout';
 //Avemnevoie de fisierul JSON
-import products from '../utils/products.json'
+import products from '../utils/products.json';
+import ProductList from '../components/ProductList';
 
 
         class Category extends Component{
     constructor(props) {
         super(props);
         this.state={
-            category:{}
+            category:{},
+            // Avem nevoie de itemii categoriei.
+            items: []
         }
     }
 
@@ -23,7 +26,9 @@ import products from '../utils/products.json'
         const categoryName = match.params.categoryName;
         // Folosindu-ne de categoria venita din URL, extragem din fisierul JSON doar informatiile
         // necesare acesteia, acualizand state-ul
-        this.setState({ category: products[categoryName] });
+        this.setState({ category: products[categoryName],
+        items:products[categoryName].items
+        });
     }
 
     rander(){
@@ -35,11 +40,14 @@ import products from '../utils/products.json'
                 <div className= "container-fluid container-min-max-width">
 
                     {/*din categoria curenta afisam numele*/}
-                        <h2>{this.state.category.name}</h2>
+                        <h2 className= "mb-5">{this.state.category.name}</h2>
+                    {/*Pasam itemii mai departe catre ProductList*/}
+
+                    <ProductList products = {this.state.items} />
                 </div>
-                </Layout>
+            </Layout>
 
         );
        }
-     }
+        }
             export default Category;

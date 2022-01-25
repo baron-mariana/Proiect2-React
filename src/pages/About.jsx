@@ -1,7 +1,7 @@
 import React from 'react';
-import Layout from "../components/Layout";
+import Layout from '../components/Layout';
 
-function About (props) {
+function About () {
     return (
         <div>
 

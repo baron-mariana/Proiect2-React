@@ -1,9 +1,9 @@
 import React from 'react';
 //import componenta Layout, in loc sa inport si header-ul si footer-ul
 
-import Layout from "../components/Layout"
+import Layout from '../components/Layout'
 import products from '../utils/products.json';
-import HomeCategory from "../components/HomeCategory";
+import HomeCategory from '../components/HomeCategory';
 
 
 
@@ -26,9 +26,14 @@ class Home extends React.Component{
     }
 
     render() {
+        //Preluam propsurile de interes.
+        const  {user, signOut} = this.props;
         return(
             // Fiecare pagina cu header si footer trebuie sa aiba continutul incadrat de Layout
-            <Layout>
+            <Layout
+                user={user}
+                signOut={signOut}
+                >
                 {/* Bootstrap: div-ul cu clasa container-fluid + div-ul cu class row sunt folosite pentru
                 asezarea in pagina(vezi teoria!). Clasa container-min-max-width e scrisa de noi si se afla in fisierul
                 utility-classes, importat in App.js */}

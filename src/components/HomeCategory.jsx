@@ -1,10 +1,11 @@
 import React from 'react';
-import {Link} from "react-router-dom";
+import {Link} from 'react-router-dom';
 
 // HomeCategory este componenta care afiseaza imaginea, titlul si descrierea unei categorii. (preview-ul acesteia)
 // De asemenea, trebuie sa primeasca si ruta(numele categoriei) catre care va redirectiona atunci
 // cand se da click pe ea.
-function HomeCategory(props) {
+const HomeCategory =(props) => {
+
 
     const {route, name, description, image} = props;
     return (

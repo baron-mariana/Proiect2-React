@@ -8,9 +8,13 @@ import './Layout.css';
 //rfce react snippets
 
 function Layout(props) {
+    // Preluam props-urile de interes.
+    const {user, signOut} = props;
     return(
         <div>
-            <Header/>
+            <Header
+                user={user}
+                signOut={signOut}/>
             {/*Daca intre deschiderea si inchiderea unei componente Layout instantiem mai multe componente ,*/}
             {/*atunci props.children va reprezenta intreaga componenta pasata lui Layout*/}
 
